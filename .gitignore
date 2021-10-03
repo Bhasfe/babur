@@ -1,0 +1,13 @@
+payload-example.json
+.DS_Store
+*.idea*
+*.pyc
+*.pyo
+*.zip
+ngrok
+publish.sh
+.vscode/
+credentials/
+.env
+catboost_info/
+.gitlab-ci.yml

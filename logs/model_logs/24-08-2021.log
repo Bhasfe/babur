@@ -1,0 +1,38 @@
+2021-08-24 15:15:13,519 - INFO - Loading data...
+2021-08-24 15:15:17,212 - INFO - None
+2021-08-24 15:15:17,213 - INFO - 
+Class Distribution: 
+example_label    376
+example_label2   245
+
+Name: label, dtype: int64
+2021-08-24 15:15:17,213 - INFO - Preprocessing...
+2021-08-24 15:15:17,221 - INFO - Encoded labels:
+             label  label_enc
+6    example_label          0
+2   example_label2          1
+
+
+2021-08-24 15:15:17,224 - INFO - Training...
+2021-08-24 15:15:17,390 - INFO - Word-level Tfidf - Logistic Regression Accuracy: 0.7305194805194806
+2021-08-24 15:15:17,392 - INFO - Word-level Tfidf - Naive Bayes Accuracy: 0.5941558441558441
+2021-08-24 15:15:17,670 - INFO - Word-level Tfidf - Random Forest Accuracy: 0.7207792207792207
+2021-08-24 15:15:18,180 - INFO - Word-level Tfidf - XGBoost Accuracy: 0.7045454545454546
+2021-08-24 15:15:18,307 - INFO - Word-level Tfidf - SVM Accuracy: 0.6948051948051948
+2021-08-24 15:15:18,757 - INFO - Ngram-level Tfidf - Logistic Regression Accuracy: 0.577922077922078
+2021-08-24 15:15:18,759 - INFO - Ngram-level Tfidf - Naive Bayes Accuracy: 0.5551948051948052
+2021-08-24 15:15:19,260 - INFO - Ngram-level Tfidf - Random Forest Accuracy: 0.5616883116883117
+2021-08-24 15:15:21,280 - INFO - Ngram-level Tfidf - XGBoost Accuracy: 0.5746753246753247
+2021-08-24 15:15:21,423 - INFO - Ngram-level Tfidf - SVM Accuracy: 0.6038961038961039
+2021-08-24 15:15:21,927 - INFO - Character-level Tfidf - Logistic Regression Accuracy: 0.7337662337662337
+2021-08-24 15:15:21,930 - INFO - Character-level Tfidf - Naive Bayes Accuracy: 0.4772727272727273
+2021-08-24 15:15:22,468 - INFO - Character-level Tfidf - Random Forest Accuracy: 0.7272727272727273
+2021-08-24 15:15:25,521 - INFO - Character-level Tfidf - XGBoost Accuracy: 0.7435064935064936
+2021-08-24 15:15:26,660 - INFO - Character-level Tfidf - SVM Accuracy: 0.737012987012987
+2021-08-24 15:15:26,661 - INFO - ################################################################# 
+
+2021-08-24 15:15:26,661 - INFO - Best Model: char_level_tfidf_xgboost
+
+2021-08-24 15:15:26,661 - INFO - Training with all data
+2021-08-24 15:15:31,675 - INFO - 
+###########################  FINISHED ########################### 

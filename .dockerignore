@@ -1,0 +1,6 @@
+payload-example.json
+.DS_Store
+*.idea*
+*.pyc
+*.pyo
+*.zip

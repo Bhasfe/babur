@@ -1,0 +1,22 @@
+name: babur
+channels:
+  - defaults
+dependencies:
+  - python=3.8.3
+  - pip
+  - pip:
+    - google-cloud-bigquery
+    - google-api-python-client
+    - slackeventsapi
+    - python-dotenv
+    - oauth2client
+    - slackclient
+    - slack-bolt
+    - catboost
+    - gunicorn
+    - sklearn
+    - gspread
+    - xgboost
+    - pyarrow
+    - pandas
+    - nltk

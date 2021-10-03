@@ -1,0 +1,23 @@
+version: '3'
+services:
+  web:
+    container_name: babur
+    build: 
+      context: .  
+    restart: always
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./logs/app_logs:/app/logs/app_logs
+      - ./logs/model_logs:/app/logs/model_logs
+      - ./model:/app/model
+      - ./data:/app/data
+  nginx:
+    container_name: babur-nginx
+    restart: always
+    build: 
+      context: ./nginx
+    ports:
+      - "5001:80"
+    depends_on:
+      - web
