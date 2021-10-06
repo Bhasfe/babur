@@ -33,20 +33,20 @@ MODEL_TEST_MODE = True
 
 nltk.download('punkt')
 
+def load_data_from_csv_file(file_path: str) -> pd.DataFrame:
+    """Get the data from a csv file into a pandas DataFrame"""
+    df = pd.read_csv(file_path)
 
-def load_data() -> pd.DataFrame:
+    logging.info(df.info())
+    logging.info(f"\nClass Distribution: \n{df['label'].value_counts()}")
+
+    return df
+
+def load_data_from_bq(query) -> pd.DataFrame:
     """Get the data from BigQuery into a pandas DataFrame"""
 
     # Authenticate BigQuery
     client = bigquery.Client()
-
-    query = """
-            select 
-                sentence, 
-                label 
-            from `project_id.dataset_id.table_id`
-            where label is not null;
-    """
 
     query_job = client.query(query)
 
@@ -231,7 +231,7 @@ if __name__ == '__main__':
 
     # Load data
     logging.info("Loading data...")
-    df = load_data()
+    df = load_data_from_bq(query = """select sentence, label from `project_id.dataset_id.table_id` where label is not null;""")
 
     # Preprocessing
     logging.info("Preprocessing...")
